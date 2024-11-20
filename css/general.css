@@ -16,6 +16,7 @@ Default: 1
 Small: 1.05
 Medium: 1.2
 Paragraph default: 1.6
+large:1.8
 
 
 -LETTER SPACING
@@ -72,6 +73,7 @@ html {
   /* 10px/ 16px = .625 = 62.5% */
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -79,6 +81,9 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+
+  /* Only work if there is nothing abslutely positioned to body */
+  overflow-x: hidden;
 }
 
 /***********************************/
@@ -119,9 +124,9 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.grid--5-cols {
+/* .grid--5-cols {
   grid-template-columns: repeat(5, 1fr);
-}
+} */
 
 .grid--center-v {
   align-items: center;
@@ -148,9 +153,9 @@ body {
 }
 
 .heading-tertiary {
-  font-size: 3.6rem;
-  /* line-height: 1.2rem; */
-  margin-bottom: 3rem;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
 }
 
 .subheading {
@@ -252,6 +257,7 @@ body {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 
 .list-icon {
